@@ -1,19 +1,19 @@
-class Car {
-    String model;
-    int year;
+class Main {
+  public static void main(String[] args) {
 
-    // A method to display car details
-    void displayInfo() {
-        System.out.println("Model: " + model + ", Year: " + year);
-    }
-}
+    String str = "Radar", reverseStr = "";
+    
+    int strLength = str.length();
 
-public class Main {
-    public static void main(String[] args) {
-        Car myCar = new Car(); // Creating an object of class Car
-        myCar.model = "Tesla Model 3";
-        myCar.year = 2024;
-        
-        myCar.displayInfo(); // Calling the method
+    for (int i = (strLength - 1); i >=0; --i) {
+      reverseStr = reverseStr + str.charAt(i);
     }
+
+    if (str.toLowerCase().equals(reverseStr.toLowerCase())) {
+      System.out.println(str + " is a Palindrome String.");
+    }
+    else {
+      System.out.println(str + " is not a Palindrome String.");
+    }
+  }
 }
